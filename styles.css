@@ -1,0 +1,164 @@
+@font-face {
+	font-family: 'Libre-Baskerville';
+	src: url('fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Libre-Baskerville';
+	src: url('fonts/Libre_Baskerville/LibreBaskerville-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: oblique;
+}
+
+
+@font-face {
+	font-family: 'Avenir';
+	src: url('fonts/Avenir.ttc') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+html,
+body {
+    background-color: black;
+}
+
+
+.container-fluid {
+    background-color: black;
+}
+
+h5 {
+    font-family: 'Libre-Baskerville';
+    font-weight: bold;
+    font-style: normal;
+}
+
+.default-text {
+    color: #4eaadf;
+}
+
+footer {
+    background-color: black;
+}
+
+.work-text {
+    pointer-events: none;
+    /* Ensure the overlay doesn't interfere with interactions */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    z-index: 2;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.work-text div {
+    margin: 10px 0;
+    /* Add some spacing between lines */
+}
+
+.work-text h5 {
+    letter-spacing: 2px;
+    font-family: 'Avenir';
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.work-container {
+    position: relative;
+    overflow: hidden !important;
+}
+
+.work-container .work-text {
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.8s ease;
+    /* Smooth transition for the text */
+}
+
+.work-container:hover .work-text {
+    opacity: 1;
+    /* Show text on hover */
+}
+
+
+
+.work-container-padding {
+    padding: 5px !important;
+}
+
+
+
+.work-bg {
+    z-index: 0;
+    width: 100%;
+    height: 400px;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.work-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* Covers the entire `.work-bg` */
+    background-color: rgba(0, 0, 0, 0);
+    /* Adjust the color and opacity */
+    z-index: 1;
+    /* Place the overlay above the background but below other content */
+    pointer-events: none;
+    /* Ensure the overlay doesn't interfere with interactions */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for the overlay */
+}
+
+.work-bg:hover::after {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Darken the overlay on hover */
+
+}
+
+
+
+
+.work-bg:hover {
+    transform: scale(1.1);
+
+}
+
+.tg-logo {
+    padding: auto;
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+.home-links>h5 {
+    padding: 10px;
+    display: block;
+}
+
+.reel-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.work-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
