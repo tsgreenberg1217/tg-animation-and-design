@@ -20,9 +20,17 @@
 }
 
 
-html,
+
 body {
-    background-color: black;
+    background: black !important;
+}
+
+p{
+	color: white;
+	font-family: 'Libre-Baskerville';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 16px;
 }
 
 
@@ -30,10 +38,29 @@ body {
     background-color: black;
 }
 
+
+
+.container {
+    background-color: black;
+}
+
+h1{
+	color: white;
+	font-family: 'Avenir';
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: 5px;
+	
+}
+
 h5 {
     font-family: 'Libre-Baskerville';
     font-weight: bold;
     font-style: normal;
+}
+
+.default-title {
+    color: white;
 }
 
 .default-text {
@@ -46,4 +73,11 @@ h5 {
     width: 150px;
     height: auto;
     display: block;
+}
+
+iframe {
+	/* min-height: 100px; */
+    width: 100%; /* Take up the full width of the container */
+    height: 500px;
+    border: none; /* Remove the border */
 }
